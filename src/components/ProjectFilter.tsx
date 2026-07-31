@@ -35,7 +35,7 @@ export function ProjectFilter() {
         {visibleProjects.map((project) => {
           const Icon = project.icon;
           return (
-            <article key={project.title} className="rounded border border-line bg-panel/82 p-6 shadow-glow signal-line">
+            <article key={project.title} className="moving-border-card rounded border border-line bg-panel/82 p-6 shadow-glow signal-line">
               <div className="mb-5 flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <span className="grid h-11 w-11 place-items-center rounded border border-cyanSignal/30 bg-cyanSignal/10 text-cyanSignal">

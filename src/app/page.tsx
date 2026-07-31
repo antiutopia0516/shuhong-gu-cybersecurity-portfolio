@@ -1,13 +1,19 @@
 import { CyberHero } from "@/components/CyberHero";
 import { ProgressDashboard } from "@/components/ProgressDashboard";
 import { SectionHeader } from "@/components/SectionHeader";
+import { SkillMarquee } from "@/components/SkillMarquee";
+import { SocTerminal } from "@/components/SocTerminal";
+import { TelemetryDeck } from "@/components/TelemetryDeck";
 import { projects, skillGroups } from "@/data/portfolio";
 
 export default function Home() {
   return (
     <>
       <CyberHero />
+      <SkillMarquee />
       <ProgressDashboard />
+      <TelemetryDeck />
+      <SocTerminal />
       <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <SectionHeader
           eyebrow="Portfolio Snapshot"

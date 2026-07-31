@@ -46,7 +46,7 @@ export const focusAreas = [
 ];
 
 export const dashboardStats = [
-  { label: "Security+ Progress", value: 78, detail: "Expected May 2026" },
+  { label: "Security+ Progress", value: 78, detail: "In Progress" },
   { label: "CCNA Progress", value: 42, detail: "Expected Dec 2026" },
   { label: "Homelab Maturity", value: 68, detail: "AD, Splunk, Sysmon" }
 ];
@@ -171,7 +171,7 @@ export const certifications = [
   {
     name: "CompTIA Security+",
     status: "In Progress",
-    expected: "Expected May 2026",
+    expected: "In Progress",
     icon: BadgeCheck,
     focus: "Security concepts, threat analysis, identity, risk, architecture, and operations."
   },

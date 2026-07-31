@@ -39,6 +39,38 @@ a {
   mask-image: linear-gradient(to bottom, black, transparent 82%);
 }
 
+.cyber-mesh {
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(circle at 50% 24%, black, transparent 72%);
+}
+
+.network-path {
+  fill: none;
+  stroke: rgba(34, 211, 238, 0.38);
+  stroke-dasharray: 10 14;
+  stroke-width: 1.2;
+}
+
+.path-a {
+  animation: dashFlow 16s linear infinite;
+}
+
+.path-b {
+  animation: dashFlow 19s linear infinite reverse;
+}
+
+.path-c {
+  animation: dashFlow 22s linear infinite;
+}
+
+.network-node {
+  animation: nodeBlink 3.2s ease-in-out infinite;
+  fill: rgba(52, 211, 153, 0.85);
+}
+
 .signal-line {
   position: relative;
   overflow: hidden;
@@ -65,6 +97,22 @@ a {
   }
 }
 
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -220;
+  }
+}
+
+@keyframes nodeBlink {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 .pulse-node {
   animation: pulseNode 2.8s ease-in-out infinite;
 }
@@ -78,5 +126,82 @@ a {
   50% {
     box-shadow: 0 0 28px rgba(34, 211, 238, 0.35);
     transform: scale(1.04);
+  }
+}
+
+.console-card,
+.telemetry-card {
+  animation: cardRise 680ms ease both;
+}
+
+@keyframes cardRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-marquee {
+  animation: marquee 38s linear infinite;
+  padding-left: 1rem;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.terminal-cursor {
+  animation: cursorBlink 1s steps(2, start) infinite;
+}
+
+@keyframes cursorBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.moving-border-card {
+  position: relative;
+}
+
+.moving-border-card::before {
+  animation: borderSpin 7s linear infinite;
+  background: conic-gradient(from 0deg, transparent, rgba(34, 211, 238, 0.36), transparent 28%, rgba(52, 211, 153, 0.26), transparent 55%);
+  border-radius: inherit;
+  content: "";
+  inset: -1px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 180ms ease;
+  z-index: -1;
+}
+
+.moving-border-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes borderSpin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

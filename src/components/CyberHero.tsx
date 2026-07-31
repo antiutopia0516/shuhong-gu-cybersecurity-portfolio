@@ -1,16 +1,18 @@
 import { ArrowRight, Download, FolderKanban, Mail, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
+import { CyberBackground } from "@/components/CyberBackground";
+import { DecryptedText } from "@/components/DecryptedText";
 import { profile } from "@/data/portfolio";
 
 export function CyberHero() {
   return (
     <section className="relative overflow-hidden border-b border-line">
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(115deg,rgba(34,211,238,0.10),transparent_38%,rgba(52,211,153,0.08))]" />
+      <CyberBackground />
       <div className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-12 px-5 py-16 md:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded border border-cyanSignal/30 bg-cyanSignal/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyanSignal">
             <ShieldCheck size={16} />
-            SOC Analyst Candidate
+            <DecryptedText text="SOC Analyst Candidate" />
           </div>
           <h1 className="max-w-4xl text-4xl font-semibold tracking-normal text-white md:text-6xl">
             Security operations portfolio for practical detection, support, and infrastructure work.
@@ -45,7 +47,8 @@ export function CyberHero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-lg">
-          <div className="rounded border border-line bg-panel/90 p-5 shadow-glow signal-line">
+          <div className="absolute -inset-1 rounded bg-gradient-to-r from-cyanSignal/20 via-blueSignal/10 to-greenSignal/20 blur-xl" />
+          <div className="relative rounded border border-line bg-panel/90 p-5 shadow-glow signal-line">
             <div className="mb-5 flex items-center justify-between border-b border-line pb-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.22em] text-slate-500">Analyst Console</p>
@@ -64,7 +67,7 @@ export function CyberHero() {
                 ["Hardening", "GPO controls, password policy, admin exposure reduction"],
                 ["Support", "ServiceNow, VPN, MFA, Windows/macOS troubleshooting"]
               ].map(([label, value], index) => (
-                <div key={label} className="rounded border border-line bg-ink/60 p-4">
+                <div key={label} className="console-card rounded border border-line bg-ink/60 p-4" style={{ animationDelay: `${index * 100}ms` }}>
                   <div className="mb-2 flex items-center justify-between">
                     <span className="font-mono text-xs text-cyanSignal">0{index + 1}</span>
                     <span className="h-2 w-2 rounded-full bg-greenSignal" />
