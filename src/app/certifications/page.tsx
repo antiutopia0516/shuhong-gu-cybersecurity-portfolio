@@ -13,7 +13,7 @@ export default function CertificationsPage() {
       <SectionHeader
         eyebrow="Certifications"
         title="Credential path aligned with SOC and network fundamentals"
-        description="Security+ and CCNA preparation support the same operating knowledge needed for alert triage, endpoint analysis, and network troubleshooting."
+        description="Security+ validates core security foundations, while CCNA preparation continues to build the networking knowledge needed for alert triage, endpoint analysis, and infrastructure troubleshooting."
       />
       <div className="grid gap-6 md:grid-cols-2">
         {certifications.map((cert) => {

@@ -46,7 +46,7 @@ export const focusAreas = [
 ];
 
 export const dashboardStats = [
-  { label: "Security+ Progress", value: 78, detail: "In Progress" },
+  { label: "Security+ Certified", value: 100, detail: "Earned" },
   { label: "CCNA Progress", value: 42, detail: "Expected Dec 2026" },
   { label: "Homelab Maturity", value: 68, detail: "AD, Splunk, Sysmon" }
 ];
@@ -56,7 +56,7 @@ export const learningPath = [
   "Windows Security Event IDs",
   "Kerberos and AD attack paths",
   "CCNA routing and switching foundations",
-  "Security+ domains and exam objectives"
+  "Security+ certified security foundations"
 ];
 
 export const projects = [
@@ -170,8 +170,8 @@ export const education = {
 export const certifications = [
   {
     name: "CompTIA Security+",
-    status: "In Progress",
-    expected: "In Progress",
+    status: "Earned",
+    expected: "Certified",
     icon: BadgeCheck,
     focus: "Security concepts, threat analysis, identity, risk, architecture, and operations."
   },
