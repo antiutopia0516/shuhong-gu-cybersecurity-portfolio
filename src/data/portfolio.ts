@@ -1,12 +1,10 @@
 import {
-  Activity,
   BadgeCheck,
-  BookOpenCheck,
-  BriefcaseBusiness,
   Contact,
   DatabaseZap,
   GraduationCap,
   Network,
+  Route,
   Radar,
   ServerCog,
   ShieldCheck,
@@ -23,7 +21,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/shuhonggu/",
   resumePath: "/resume.pdf",
   summary:
-    "Information Technology & Informatics student with hands-on experience in endpoint support, campus IT operations, network troubleshooting, and security-focused homelab work. Building practical SOC analyst skills through Splunk, Active Directory, Sysmon telemetry, detection engineering, and adversary simulation."
+    "Information Technology & Informatics student with a Computer Science minor and CompTIA Security+ certification. Seeking entry-level opportunities in IT support, cybersecurity, SOC, and network operations with hands-on project experience in Splunk, Active Directory, Sysmon, traffic analysis, and network security fundamentals."
 };
 
 export const navItems = [
@@ -31,7 +29,7 @@ export const navItems = [
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
   { label: "Skills", href: "/skills" },
-  { label: "Experience", href: "/experience" },
+  { label: "Lab Experience", href: "/experience" },
   { label: "Certifications", href: "/certifications" },
   { label: "Contact", href: "/contact" }
 ];
@@ -41,13 +39,13 @@ export const focusAreas = [
   "Windows event analysis",
   "SIEM dashboards",
   "Active Directory security",
-  "Network troubleshooting",
-  "Endpoint hardening"
+  "Network traffic analysis",
+  "Firewall and ACL controls"
 ];
 
 export const dashboardStats = [
   { label: "Security+ Certified", value: 100, detail: "Earned" },
-  { label: "CCNA Progress", value: 42, detail: "Expected Dec 2026" },
+  { label: "Network Lab Coverage", value: 76, detail: "VLAN, ACL, NAT, DNS" },
   { label: "Homelab Maturity", value: 68, detail: "AD, Splunk, Sysmon" }
 ];
 
@@ -55,7 +53,8 @@ export const learningPath = [
   "Splunk SPL detection logic",
   "Windows Security Event IDs",
   "Kerberos and AD attack paths",
-  "CCNA routing and switching foundations",
+  "Wireshark packet analysis",
+  "VLAN, routing, DHCP, DNS, and NAT",
   "Security+ certified security foundations"
 ];
 
@@ -99,6 +98,27 @@ export const projects = [
       "Demonstrated software engineering discipline, user-centered workflow design, and practical data handling.",
       "Built a foundation for dashboard-style interfaces useful in security operations and IT service workflows."
     ]
+  },
+  {
+    title: "Network Security & Traffic Analysis Lab",
+    type: "Security Lab",
+    status: "Completed Lab",
+    icon: Route,
+    tags: ["VLANs", "Routing", "DHCP", "DNS", "NAT", "ACLs", "Wireshark"],
+    summary:
+      "A segmented network security lab focused on traffic visibility, access-control enforcement, and root-cause troubleshooting.",
+    highlights: [
+      "Designed a segmented network environment with multiple VLANs, routing, DHCP, DNS, NAT, and access-control policies.",
+      "Configured firewall and ACL rules to restrict inter-VLAN communication and enforce least-privilege network access.",
+      "Captured and analyzed TCP/IP, DNS, ICMP, and HTTP/S traffic using Wireshark to identify normal and anomalous communication patterns.",
+      "Troubleshot simulated connectivity, DNS resolution, and access-control failures using packet captures and command-line network utilities.",
+      "Documented network topology, security controls, and root-cause analysis for each troubleshooting scenario."
+    ],
+    outcomes: [
+      "Strengthened practical understanding of network segmentation, traffic behavior, and security policy validation.",
+      "Practiced packet-level troubleshooting workflows relevant to SOC, NOC, IT support, and network operations teams.",
+      "Built documentation habits around topology, control intent, observed traffic, and incident-style root-cause findings."
+    ]
   }
 ];
 
@@ -106,12 +126,12 @@ export const skillGroups = [
   {
     title: "Security",
     icon: ShieldCheck,
-    skills: ["Splunk", "SIEM", "Active Directory", "Windows Security", "Network Security", "GPO"]
+    skills: ["Splunk", "SIEM", "Active Directory", "Windows Security", "Network Security", "GPO", "Wireshark"]
   },
   {
     title: "Networking",
     icon: Network,
-    skills: ["TCP/IP", "DNS", "DHCP", "VPN"]
+    skills: ["TCP/IP", "DNS", "DHCP", "VPN", "VLANs", "NAT", "ACLs"]
   },
   {
     title: "Operating Systems",
@@ -132,29 +152,43 @@ export const skillGroups = [
 
 export const experience = [
   {
-    role: "IT Support Assistant",
-    company: "Rutgers, The State University of New Jersey",
-    location: "New Brunswick, NJ",
-    period: "Oct 2024 - Nov 2025",
-    icon: BriefcaseBusiness,
+    role: "Enterprise Security Monitoring & Active Directory Lab",
+    company: "Independent Security Homelab",
+    location: "Virtual Lab",
+    period: "SIEM & Identity Security",
+    icon: Radar,
     points: [
-      "Delivered first-level support for students and faculty through ServiceNow, following structured ticketing, documentation, and escalation workflows.",
-      "Resolved Windows, macOS, application, DNS, DHCP, and connectivity issues in a campus environment with diverse user needs.",
-      "Supported secure access workflows including campus Wi-Fi, VPN, Microsoft 365, and MFA configuration.",
-      "Performed system maintenance, driver updates, OS updates, basic malware scans, and classroom technology support."
+      "Built a virtualized Active Directory environment using VirtualBox, Windows Server 2022, and Kali Linux to simulate a small enterprise network.",
+      "Configured Splunk to ingest Windows Security/System logs and Sysmon telemetry for centralized monitoring and event analysis.",
+      "Simulated RDP/SSH brute-force attempts and Kerberoasting activity to generate realistic authentication and Kerberos-related telemetry.",
+      "Created SPL searches, dashboards, and alerts for repeated authentication failures, suspicious login activity, and potential Kerberos abuse.",
+      "Applied Group Policy settings to strengthen password requirements and restrict administrative privileges within the domain."
     ]
   },
   {
-    role: "Freelance IT Technician",
-    company: "Independent Client Support",
-    location: "Remote",
-    period: "Jan 2022 - Present",
-    icon: Activity,
+    role: "Network Security & Traffic Analysis Lab",
+    company: "Independent Networking Lab",
+    location: "Virtual Lab",
+    period: "Network Security",
+    icon: Route,
     points: [
-      "Provide endpoint support for Windows and macOS systems, identifying hardware, operating system, access, and security-related issues.",
-      "Troubleshoot TCP/IP, DNS, DHCP, router configuration, and wireless reliability problems for home and small-office environments.",
-      "Configure small-office networks with basic firewall rules, guest isolation, and practical segmentation practices.",
-      "Assist users with secure remote access using TeamViewer and AnyDesk, and recover compromised endpoints by isolating systems and restoring data from backups."
+      "Designed a segmented network environment with multiple VLANs, routing, DHCP, DNS, NAT, and access-control policies.",
+      "Configured firewall and ACL rules to restrict inter-VLAN communication and enforce least-privilege network access.",
+      "Captured and analyzed TCP/IP, DNS, ICMP, and HTTP/S traffic with Wireshark to identify expected and anomalous communication patterns.",
+      "Troubleshot simulated connectivity, DNS resolution, and access-control failures using packet captures and command-line network utilities.",
+      "Documented network topology, security controls, and root-cause analysis for each troubleshooting scenario."
+    ]
+  },
+  {
+    role: "Job Application Tracker",
+    company: "Java Desktop Application",
+    location: "Software Project",
+    period: "JavaFX & MVC",
+    icon: DatabaseZap,
+    points: [
+      "Built a JavaFX desktop application with MVC architecture, CSV-based persistent storage, input validation, and error handling.",
+      "Developed administrative record management and filtering features that mirror operational dashboard workflows.",
+      "Practiced maintainable application structure, state handling, and data integrity controls."
     ]
   }
 ];
@@ -174,13 +208,6 @@ export const certifications = [
     expected: "Certified",
     icon: BadgeCheck,
     focus: "Security concepts, threat analysis, identity, risk, architecture, and operations."
-  },
-  {
-    name: "Cisco CCNA",
-    status: "In Progress",
-    expected: "Expected Dec 2026",
-    icon: BookOpenCheck,
-    focus: "Routing, switching, TCP/IP, network access, IP services, and infrastructure fundamentals."
   }
 ];
 

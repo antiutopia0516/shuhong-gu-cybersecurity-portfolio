@@ -4,7 +4,7 @@ import { certifications } from "@/data/portfolio";
 
 export const metadata: Metadata = {
   title: "Certifications",
-  description: "Certification roadmap for Shuhong Gu, including CompTIA Security+ and Cisco CCNA."
+  description: "Certification profile for Shuhong Gu, including CompTIA Security+."
 };
 
 export default function CertificationsPage() {
@@ -13,7 +13,7 @@ export default function CertificationsPage() {
       <SectionHeader
         eyebrow="Certifications"
         title="Credential path aligned with SOC and network fundamentals"
-        description="Security+ validates core security foundations, while CCNA preparation continues to build the networking knowledge needed for alert triage, endpoint analysis, and infrastructure troubleshooting."
+        description="Security+ validates core cybersecurity foundations, while the network security lab demonstrates practical routing, segmentation, packet analysis, and troubleshooting skills."
       />
       <div className="grid gap-6 md:grid-cols-2">
         {certifications.map((cert) => {

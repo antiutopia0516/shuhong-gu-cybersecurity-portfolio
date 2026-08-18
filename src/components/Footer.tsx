@@ -12,8 +12,8 @@ export function Footer() {
             <span className="font-semibold text-white">{profile.name}</span>
           </div>
           <p className="max-w-2xl text-sm leading-6 text-slate-400">
-            Built for SOC Analyst, Cybersecurity Intern, Security Operations, IT Support, and Junior Security
-            Analyst opportunities.
+            Built for SOC Analyst, Cybersecurity Intern, Security Operations, IT Support, Network Operations, and Junior
+            Security Analyst opportunities.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <a className="rounded border border-line p-2 text-slate-300 hover:border-cyanSignal/50 hover:text-cyanSignal" href={`mailto:${profile.email}`} aria-label="Email Shuhong Gu">

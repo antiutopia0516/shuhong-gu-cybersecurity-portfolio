@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Shuhong Gu"
   },
   description:
-    "Cybersecurity portfolio for Shuhong Gu, an aspiring SOC Analyst with hands-on Splunk, Active Directory, Sysmon, IT support, and network troubleshooting experience.",
+    "Cybersecurity portfolio for Shuhong Gu, a Security+ certified aspiring SOC Analyst with hands-on Splunk, Active Directory, Sysmon, Wireshark, network security, and troubleshooting projects.",
   keywords: [
     "Shuhong Gu",
     "SOC Analyst",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shuhong Gu | Cybersecurity Portfolio",
     description:
-      "Aspiring SOC Analyst focused on SIEM monitoring, Active Directory security, endpoint troubleshooting, and practical detection engineering.",
+      "Security+ certified aspiring SOC Analyst focused on SIEM monitoring, Active Directory security, network traffic analysis, and practical detection engineering.",
     url: "https://shuhong-gu.vercel.app",
     siteName: "Shuhong Gu Cybersecurity Portfolio",
     locale: "en_US",

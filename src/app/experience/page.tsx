@@ -3,17 +3,17 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { experience } from "@/data/portfolio";
 
 export const metadata: Metadata = {
-  title: "Experience",
-  description: "IT support and freelance technician experience for Shuhong Gu, written for SOC and cybersecurity hiring teams."
+  title: "Lab Experience",
+  description: "Security lab and project experience for Shuhong Gu, written for SOC and cybersecurity hiring teams."
 };
 
 export default function ExperiencePage() {
   return (
     <section className="mx-auto max-w-5xl px-5 py-16 lg:px-8">
       <SectionHeader
-        eyebrow="Experience"
-        title="Operational support experience with security relevance"
-        description="Experience translating user issues, endpoint problems, network failures, and access workflows into documented, supportable outcomes."
+        eyebrow="Lab Experience"
+        title="Hands-on project experience with SOC and network operations relevance"
+        description="Project-based experience translating logs, identity behavior, packet captures, access controls, and troubleshooting scenarios into documented security outcomes."
       />
       <div className="relative space-y-6 before:absolute before:left-5 before:top-4 before:h-[calc(100%-2rem)] before:w-px before:bg-line md:before:left-7">
         {experience.map((item) => {
